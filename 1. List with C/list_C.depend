@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1486445060 source:/media/Here/semestre #6/ED2/list_C/main.c
+	<stdio.h>
+	<stdlib.h>
+	"list.h"
+
+1486487640 /media/Here/semestre #6/ED2/list_C/list.h
+	<stdlib.h>
+
