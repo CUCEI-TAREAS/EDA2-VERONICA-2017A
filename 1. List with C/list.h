@@ -2,65 +2,47 @@
 #define LIST_H_INCLUDED
 
 #include <stdlib.h>
+#include "node.h"
 
-// simulate templates
-#define DATA int
-
-struct Node {
-	struct Node *next, *prev;
-	DATA data;
-};
+#define LIST_EMPTY      1
+#define LIST_NOT_EMPTY  0
 
 struct List {
 	struct Node *first;
 };
 
-// Node's methods
-void node_init(struct Node *e){
-	e->next = NULL;
-	e->prev = NULL;
-}
-
-/*
-void node_setNext(struct Node *e, struct Node *f){
-	e->next = f;
-}
-
-void node_setPrev(struct Node *e, struct Node *f){
-	e->prev = f;
-}
-
-struct Node* node_getNext(struct Node* e){
-	return e->next;
-}
-
-struct Node* node_getPrev(struct Node* e){
-	return e->prev;
-}
-
-*/
-
 // List's methods
+void list_init(struct List*);
+short list_isEmpty(struct List*);
+void list_insertNext_byValue(struct List*, DATA);
+
+// List's Definition
 void list_init(struct List* list){
 	list->first = NULL;
+}
+short list_isEmpty(struct List *list){
+    if (list->first != NULL)
+        return LIST_NOT_EMPTY;
+    else
+        return LIST_EMPTY;
 }
 
 void list_insertNext_byValue(struct List* list, DATA value){
 
-	if(list->first == NULL ){
+	if(list_isEmpty(list)){
 		list->first = malloc(sizeof(struct Node));
 		node_init(list->first);
 		list->first->data = value;
 	}
 	else {
-		struct Node *aux = malloc(sizeof(struct Node));
-        aux = list->first;
+        struct Node *aux = list->first;
 
         while (aux->next != NULL){
             aux = aux->next;
         }
 
         aux->next = malloc(sizeof(struct Node));
+        node_init(aux->next);
         aux->next->data = value;
         aux = NULL;
         free(aux);
@@ -77,10 +59,6 @@ void list_deleteFirst(struct List *list){
 void list_printByPosition(struct List *list, int position){
 
 }
-short list_isEmpty(struct List *list){
-
-}
-
 void list_printAll(struct List *list){
         struct Node *aux = malloc(sizeof(struct Node));
         aux = list->first;
