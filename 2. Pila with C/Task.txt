@@ -1,0 +1,4 @@
+Hola buen dia el viernes 10 no los podre ver, el tema a revisar son pilas, favor de revisar como crear pila, como saber si la pila esta llena, vacia, hacer el codigo en c
+y realizar el siguiente programa:
+
+ESCRIBIR UNA FUNCION COPIAR PILA, QUE COPIE EL CONTENIDO DE UNA PILA EN OTRA. LA FUNCION TENDRA DOS ARGUMENTOS DE TIPO PILA, UNO PARA LA PILA FUENTE Y OTRO PARA LA PILA DESTINO.
