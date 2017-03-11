@@ -17,7 +17,7 @@ void list_init(struct List*);
 short list_isEmpty(struct List*);
 void list_insertNext_byValue(struct List*, DATA);
 struct Node* list_getLatestPosition(struct List*);
-
+struct Node* list_getByPosition(struct List*, short);
 
 
 // List's Definition
@@ -68,7 +68,6 @@ struct Node* list_getLatestPosition(struct List* list){
     return aux;
 }
 
-
 /// SCRAP
 void list_deleteFirst(struct List *list){
     if(!list_isEmpty(list)){
@@ -77,8 +76,15 @@ void list_deleteFirst(struct List *list){
     }
 }
 
-void list_printByPosition(struct List *list, int position){
-
+struct Node* list_getByPosition(struct List *list, short position){
+    if (list_isEmpty(list)){
+        printf(" LIST EMPTY  ");
+        return;
+    }
+    else if ( position > list->elements ){
+        printf(" POSITION INVALID");
+        return;
+    }
 }
 
 void list_printAll(struct List *list){

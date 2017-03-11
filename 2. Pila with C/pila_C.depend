@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1489263509 source:/media/Here/semestre #6/ED2/EDA2-VERONICA-2017A/2. Pila with C/main.c
+	<stdio.h>
+	<stdlib.h>
+	"list.h"
+
+1489263566 /media/Here/semestre #6/ED2/EDA2-VERONICA-2017A/2. Pila with C/list.h
+	<stdlib.h>
+	<string.h>
+	"node.h"
+
+1486860368 /media/Here/semestre #6/ED2/EDA2-VERONICA-2017A/2. Pila with C/node.h
+

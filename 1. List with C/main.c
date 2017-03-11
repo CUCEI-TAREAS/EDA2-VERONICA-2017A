@@ -13,7 +13,6 @@ int main(){
 	list_insertNext_byValue(myList, 15);
 	list_insertNext_byValue(myList, 20);
 
-	list_deleteFirst(myList);
 	list_printAll(myList);
 
     return 0;

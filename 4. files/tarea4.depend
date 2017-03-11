@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1489254688 source:/media/Here/semestre #6/ED2/tarea4/main.cpp
+	<iostream>
+	<fstream>
+
